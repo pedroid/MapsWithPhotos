@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2015 by anonymous (http://jsbin.com/cihovezugu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<html>
+<head>
+<title>itri season map</title>
+<link rel=stylesheet type="text/css" href="style.css">
+<script src="xml_parse.js"></script>
+<script src='load_image.js'>  </script>
+<script src='jquery-1.11.2.min.js'>  </script>
+</head>
+<body>
+<script>
+var load_status_id = document.getElementById('load_status');
+
+</script>
+<div id="main_div">
+	<div id = 'info'>	</div>
+	<div id="ITRImap">
+		<div id="marker_div"></div>
+		<img id="ITRImap_img" src = "map/map1.PNG"/>	
+		<canvas id="canvas" ></canvas>	
+		<canvas id="marker_canvas"></canvas>
+		<img id="thePositionIcon" src="icon/Gump_p.png" width='20px'/>
+	</div>
+	<div id = "img-div">
+		<img id = "itri_pic" src = "img/initial.jpg"/ onprogress="loading_text()">  <!--img/initial.jpg-->
+		<div id="img_description"></div>
+		<div id="loading_progress">loading progress</div>
+	</div>
+	
+	
+	<div id="operation_info">
+		<h1>Operation Information</h1>
+		<p>press <img id="s_button_id" class="single_button" src="icon/S.png" /> to show/hide where picture was taken.<br/> 
+		press <img id = "t_button_id" class="single_button" src="icon/T.png" /> to start "jogging" in ITRI. <br/>
+		press <img id = "tab_button_id" class="tab_button" src="icon/tab.png" /> to switch map. <br/>		
+		<div id="hidden_operation_info">
+		press <img id = "ijkl_button_id" class="IJKL_button" src="icon/IJKL.png" usemap="ijkl_map"/> to move on map.
+		<map name="ijkl_map">
+			<area id="i_button_id" shape="rect" coords="45,0,90,50" />
+			<area id="j_button_id" shape="rect" coords="5,50,50,100" />
+			<area id="k_button_id" shape="rect" coords="50,50,95,100" />
+			<area id="l_button_id" shape="rect" coords="95,50,140,100" />
+		</map>
+		</div>
+		</p>		
+	</div>
+	
+	<div id="text_content">
+		<h1>about</h1>				
+		<p>ITRI在公共空間的維護上很用心，在院內四季都可以觀賞到不同的景觀。
+		試著把照片跟地點結合在一起，像RPG主角一樣去不同的地點看照片。
+		此外也加入一個慢跑路徑，位置會沿著ITRI一圈2.8K 的路徑移動，就像平常慢跑一樣。
+		每年ITRI都會舉辦兩次工研路跑，沿著院內的主要道路，總長約2.8km。</p>
+		
+		<p id='readmore_note'>(press <img id = "a_button_id" class="single_button" src="icon/A.png" /> to read more.)</p>
+		
+		<div class='readmore_paragraph'>			
+		<a Target = "_blank" href="http://timemap.kuansim.com/">TimeWrapper</a>是一個網路上的時間地圖平台，可以在這個平台上建置隨著時間軸、地圖看照片的平台，自己也試著建置了
+		<a Target = "_blank" href="http://timemap.kuansim.com/yushengc/itri-seasons-map-alpha">工研時間地圖</a>
+		。之後開始有一些構想慢慢來實作目前這個網站。</p>
+		<h1 class="todo">Cooperation</h1>
+		<h1 class="todo">photo gallery</h1>		
+		<h1 class="readmore_paragraph">類似的網站</h1>
+		<p>Google服務裡面有一個叫<a Target = "_blank" href = "http://www.panoramio.com/">panoramio</a>的網站，可以在Google map上傳照片。</p>
+		<img src = "map/panoramio.PNG"/>
+		<h1 class="readmore_paragraph">Icon:</h1>
+		<img title = "Dr. Gan" src = "icon/bak.Gump_p.png"/>
+		</div>
+		<h1>Feedback</h1>
+		<p>
+		<address>ntuyusheng@gmail.com</address>
+		</p>
+	</div>
+	
+</div>
+
+<meta name="robots" content="noindex">
+
+
+<canvas id="itri_pic_canvas" width=500px></canvas> 
+<script src="map.js"></script>
+
+
+</body>
+</html>
