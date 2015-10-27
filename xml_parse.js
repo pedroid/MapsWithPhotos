@@ -4,7 +4,7 @@ function parseXML() {
 
 	//var xmlFile="img_position.xml";
 	//var xmlDoc=loadXMLFile(xmlFile);
-	var xmlFile="https://dl.dropboxusercontent.com/u/32119999/map/img_position.xml";
+	var xmlFile="http://pedroid.github.io/MapsWithPhotos/img_position.xml";
 	var xmlData=loadXMLFile(xmlFile);
 	//console.log(xmlData);
 	//img_grp = xmlData.getElementsByTagName("imgs")[0];
